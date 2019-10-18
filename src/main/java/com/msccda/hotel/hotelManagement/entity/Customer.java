@@ -43,6 +43,23 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
+	
+	public Customer(String firstName, String lastName, int streetNumber, String streetName,
+			String city, String province, String postalCode, String country, String phoneNumber, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.streetNumber = streetNumber;
+		this.streetName = streetName;
+		this.city = city;
+		this.province = province;
+		this.postalCode = postalCode;
+		this.country = country;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
+
+	
 	public int getCustomerId() {
 		return customerId;
 	}

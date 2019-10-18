@@ -28,5 +28,16 @@ public class CustomerDao {
 		// TODO Auto-generated method stub
 		return entityManager.find(Customer.class, id);
 	}
+
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		Customer customer = findCustomerById(id);
+		entityManager.remove(customer);
+	}
+
+	public Customer insertCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		return entityManager.merge(customer);
+	}
 	
 }
