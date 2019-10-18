@@ -3,6 +3,7 @@ package com.msccda.hotel.hotelManagement.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +22,9 @@ public class CustomerController {
 		return customerDao.findAllCustomer();
 	}
 	
+	@RequestMapping(value = "/customers/{id}", method = RequestMethod.GET)
+	public Customer findCutomerById(@PathVariable int id){
+		return customerDao.findCustomerById(id);
+	}
 	
 }

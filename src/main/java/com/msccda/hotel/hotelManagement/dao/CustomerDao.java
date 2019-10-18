@@ -23,5 +23,10 @@ public class CustomerDao {
 		TypedQuery<Customer> customers = entityManager.createNamedQuery("find_all_customers", Customer.class);
 		return customers.getResultList();
 	}
+
+	public Customer findCustomerById(int id) {
+		// TODO Auto-generated method stub
+		return entityManager.find(Customer.class, id);
+	}
 	
 }
