@@ -1,15 +1,17 @@
 package com.msccda.hotel.hotelManagement.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Customer {
 	@Id
+	@GeneratedValue
 	private int customerId;
 	private String firstName;
 	private String lastName;
-	private String streetNumber;
+	private int streetNumber;
 	private String streetName;
 	private String city;
 	private String province; 
@@ -23,7 +25,7 @@ public class Customer {
 	}
 	 
 	
-	public Customer(int customerId, String firstName, String lastName, String streetNumber, String streetName,
+	public Customer(int customerId, String firstName, String lastName, int streetNumber, String streetName,
 			String city, String province, String postalCode, String country, String phoneNumber, String email) {
 		super();
 		this.customerId = customerId;
@@ -56,10 +58,10 @@ public class Customer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getStreetNumber() {
+	public int getStreetNumber() {
 		return streetNumber;
 	}
-	public void setStreetNumber(String streetNumber) {
+	public void setStreetNumber(int streetNumber) {
 		this.streetNumber = streetNumber;
 	}
 	public String getStreetName() {
