@@ -3,8 +3,11 @@ package com.msccda.hotel.hotelManagement.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+
 
 @Entity
+@NamedQuery(name="find_all_customers", query = "select c from Customer c")
 public class Customer {
 	@Id
 	@GeneratedValue
